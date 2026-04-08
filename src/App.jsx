@@ -118,26 +118,18 @@ export default function JuneteenthFishFryWeekend() {
       </nav>
 
       {/* HERO */}
-      <div ref={heroRef} style={{ position:"relative",minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"flex-end",alignItems:"center",textAlign:"center",padding:"0 24px 48px",overflow:"hidden",background:NAVY }}>
-        {/* Flyer as hero background */}
-        <div style={{ position:"absolute",inset:0,display:"flex",justifyContent:"center",alignItems:"flex-start",zIndex:0 }}>
-          <img src="https://mcusercontent.com/fec7c50f51c13199ea4820f4e/images/e5354654-b76d-27e3-115b-3d55eb15bdbb.png" alt="Juneteenth Fish Fry Weekend" style={{ width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top" }} />
-        </div>
-        {/* Bottom gradient overlay for CTA readability */}
-        <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"35%",background:"linear-gradient(to top, rgba(27,20,100,.85) 0%, rgba(27,20,100,.4) 60%, transparent 100%)",zIndex:1 }} />
-
-        <div style={{ position:"relative",zIndex:2,maxWidth:600,marginBottom:16 }}>
-          <p className="fu d3" style={{ fontSize:"clamp(14px,1.8vw,17px)",fontWeight:400,lineHeight:1.7,color:"rgba(255,255,255,.9)",maxWidth:520,margin:"0 auto 24px",textShadow:"0 1px 6px rgba(0,0,0,.3)" }}>
+      <div ref={heroRef} style={{ position:"relative",display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center",overflow:"hidden",background:NAVY }}>
+        {/* Flyer image - fully visible */}
+        <img src="https://mcusercontent.com/fec7c50f51c13199ea4820f4e/images/e5354654-b76d-27e3-115b-3d55eb15bdbb.png" alt="Juneteenth Fish Fry Weekend" style={{ width:"100%",maxWidth:700,display:"block",marginTop:64 }} />
+        
+        {/* CTA area below flyer */}
+        <div style={{ width:"100%",background:"linear-gradient(to bottom, rgba(27,20,100,0) 0%, rgba(27,20,100,1) 20%)",padding:"40px 24px 48px",marginTop:-60,position:"relative",zIndex:2 }}>
+          <p className="fu d3" style={{ fontSize:"clamp(14px,1.8vw,17px)",fontWeight:400,lineHeight:1.7,color:"rgba(255,255,255,.9)",maxWidth:520,margin:"0 auto 24px" }}>
             Four days. Ten events. One unforgettable destination weekend celebrating culture, community, and freedom.
           </p>
           <div className="fu d4" style={{ display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap" }}>
             <button className="cb" onClick={()=>scrollTo(eventsRef)} style={{ padding:"14px 36px",background:WHITE,color:NAVY,border:"none",borderRadius:24,fontSize:14,fontWeight:600,letterSpacing:.5 }}>View Schedule</button>
             <button className="cb" style={{ padding:"14px 36px",background:"rgba(255,255,255,.2)",color:WHITE,border:"2px solid rgba(255,255,255,.5)",borderRadius:24,fontSize:14,fontWeight:600,letterSpacing:.5,backdropFilter:"blur(8px)" }}>Get Tickets</button>
-          </div>
-        </div>
-        <div style={{ position:"absolute",bottom:16,left:"50%",transform:"translateX(-50%)",zIndex:2,animation:"float 2.5s ease-in-out infinite" }}>
-          <div style={{ width:28,height:44,borderRadius:14,border:"2px solid rgba(255,255,255,.4)",display:"flex",justifyContent:"center",paddingTop:8 }}>
-            <div style={{ width:3,height:10,borderRadius:2,background:"rgba(255,255,255,.7)" }} />
           </div>
         </div>
       </div>
