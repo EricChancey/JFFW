@@ -120,7 +120,7 @@ export default function JuneteenthFishFryWeekend() {
       {/* HERO */}
       <div ref={heroRef} style={{ position:"relative",display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center",overflow:"hidden",background:NAVY }}>
         {/* Flyer image - fully visible */}
-        <img src="https://mcusercontent.com/fec7c50f51c13199ea4820f4e/images/e5354654-b76d-27e3-115b-3d55eb15bdbb.png" alt="Juneteenth Fish Fry Weekend" style={{ width:"100%",maxWidth:700,display:"block",marginTop:64 }} />
+        <img src="https://mcusercontent.com/fec7c50f51c13199ea4820f4e/images/d7265f29-758a-0226-935e-ed8e60a86716.png" alt="Juneteenth Fish Fry Weekend" style={{ width:"100%",maxWidth:1200,display:"block",marginTop:64 }} />
         
         {/* CTA area below flyer */}
         <div style={{ width:"100%",background:"linear-gradient(to bottom, rgba(27,20,100,0) 0%, rgba(27,20,100,1) 20%)",padding:"40px 24px 48px",marginTop:-60,position:"relative",zIndex:2 }}>
