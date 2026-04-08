@@ -103,33 +103,35 @@ export default function JuneteenthFishFryWeekend() {
       `}</style>
 
       {/* NAV */}
-      <nav style={{ position:"fixed",top:0,left:0,right:0,zIndex:1000,background:scrollY>80?"rgba(255,255,255,.97)":"transparent",backdropFilter:scrollY>80?"blur(16px)":"none",borderBottom:scrollY>80?"1px solid rgba(232,75,165,.1)":"1px solid transparent",transition:"all .4s",padding:"0 24px" }}>
-        <div style={{ maxWidth:1100,margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center",height:64 }}>
-          <div style={{ fontFamily:"'Pacifico',cursive",fontSize:20,color:scrollY>80?NAVY:WHITE,transition:"color .4s" }}>
-            The Fish Fry
+      <nav style={{ position:"fixed",top:0,left:0,right:0,zIndex:1000,background:WHITE,borderBottom:"1px solid rgba(0,0,0,.08)",padding:"0 32px" }}>
+        <div style={{ maxWidth:1400,margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center",height:72 }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif",fontSize:24,color:NAVY,letterSpacing:3 }}>
+            JFFW <span style={{color:PINK}}>2026</span>
           </div>
-          <div style={{ display:"flex",gap:28,alignItems:"center" }}>
-            <span className="nl" onClick={()=>scrollTo(eventsRef)} style={{ fontSize:13,fontWeight:500,color:scrollY>80?TEXT_MED:"rgba(255,255,255,.9)",letterSpacing:.5,transition:"color .4s" }}>Events</span>
-            <span className="nl" onClick={()=>scrollTo(hotelRef)} style={{ fontSize:13,fontWeight:500,color:scrollY>80?TEXT_MED:"rgba(255,255,255,.9)",letterSpacing:.5,transition:"color .4s" }}>Hotel</span>
-            <span className="nl" onClick={()=>scrollTo(sponsorsRef)} style={{ fontSize:13,fontWeight:500,color:scrollY>80?TEXT_MED:"rgba(255,255,255,.9)",letterSpacing:.5,transition:"color .4s" }}>Sponsors</span>
-            <button className="cb" style={{ padding:"8px 20px",background:scrollY>80?`linear-gradient(135deg,${PINK},${BLUE})`:WHITE,color:scrollY>80?WHITE:NAVY,border:"none",borderRadius:20,fontSize:12,fontWeight:600,letterSpacing:.5 }}>Get Tickets</button>
+          <div style={{ display:"flex",gap:36,alignItems:"center" }}>
+            <span className="nl" onClick={()=>scrollTo(eventsRef)} style={{ fontSize:16,fontWeight:600,color:TEXT_DARK,letterSpacing:.5 }}>Events</span>
+            <span className="nl" onClick={()=>scrollTo(hotelRef)} style={{ fontSize:16,fontWeight:600,color:TEXT_DARK,letterSpacing:.5 }}>Hotel</span>
+            <span className="nl" onClick={()=>scrollTo(sponsorsRef)} style={{ fontSize:16,fontWeight:600,color:TEXT_DARK,letterSpacing:.5 }}>Sponsors</span>
+            <button className="cb" style={{ padding:"12px 32px",background:`linear-gradient(135deg,${PINK},${BLUE})`,color:WHITE,border:"none",borderRadius:28,fontSize:16,fontWeight:600,letterSpacing:.5 }}>Get Tickets</button>
           </div>
         </div>
       </nav>
 
       {/* HERO */}
-      <div ref={heroRef} style={{ position:"relative",display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center",overflow:"hidden",background:NAVY }}>
-        {/* Flyer image - fully visible */}
-        <img src="https://mcusercontent.com/fec7c50f51c13199ea4820f4e/images/d7265f29-758a-0226-935e-ed8e60a86716.png" alt="Juneteenth Fish Fry Weekend" style={{ width:"100%",maxWidth:1200,display:"block",marginTop:64 }} />
+      <div ref={heroRef} style={{ display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center",overflow:"hidden",background:WHITE }}>
+        {/* Banner image - full width, scaled up to zoom into Fish Fry text */}
+        <div style={{ width:"100%",marginTop:72,overflow:"hidden" }}>
+          <img src="https://mcusercontent.com/fec7c50f51c13199ea4820f4e/images/d7265f29-758a-0226-935e-ed8e60a86716.png" alt="Juneteenth Fish Fry Weekend" style={{ width:"120%",display:"block",marginLeft:"-10%",marginTop:"-3%",marginBottom:"-3%" }} />
+        </div>
         
-        {/* CTA area below flyer */}
-        <div style={{ width:"100%",background:"linear-gradient(to bottom, rgba(27,20,100,0) 0%, rgba(27,20,100,1) 20%)",padding:"40px 24px 48px",marginTop:-60,position:"relative",zIndex:2 }}>
-          <p className="fu d3" style={{ fontSize:"clamp(14px,1.8vw,17px)",fontWeight:400,lineHeight:1.7,color:"rgba(255,255,255,.9)",maxWidth:520,margin:"0 auto 24px" }}>
+        {/* CTA below banner */}
+        <div style={{ width:"100%",background:WHITE,padding:"32px 24px 48px" }}>
+          <p style={{ fontSize:"clamp(16px,2.2vw,20px)",fontWeight:400,lineHeight:1.7,color:TEXT_MED,maxWidth:600,margin:"0 auto 28px" }}>
             Four days. Ten events. One unforgettable destination weekend celebrating culture, community, and freedom.
           </p>
-          <div className="fu d4" style={{ display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap" }}>
-            <button className="cb" onClick={()=>scrollTo(eventsRef)} style={{ padding:"14px 36px",background:WHITE,color:NAVY,border:"none",borderRadius:24,fontSize:14,fontWeight:600,letterSpacing:.5 }}>View Schedule</button>
-            <button className="cb" style={{ padding:"14px 36px",background:"rgba(255,255,255,.2)",color:WHITE,border:"2px solid rgba(255,255,255,.5)",borderRadius:24,fontSize:14,fontWeight:600,letterSpacing:.5,backdropFilter:"blur(8px)" }}>Get Tickets</button>
+          <div style={{ display:"flex",gap:16,justifyContent:"center",flexWrap:"wrap" }}>
+            <button className="cb" onClick={()=>scrollTo(eventsRef)} style={{ padding:"18px 48px",background:WHITE,color:NAVY,border:`2px solid ${NAVY}`,borderRadius:32,fontSize:18,fontWeight:600,letterSpacing:.5 }}>View Schedule</button>
+            <button className="cb" style={{ padding:"18px 56px",background:`linear-gradient(135deg,${PINK},${BLUE})`,color:WHITE,border:"none",borderRadius:32,fontSize:18,fontWeight:600,letterSpacing:.5 }}>Get Tickets</button>
           </div>
         </div>
       </div>
